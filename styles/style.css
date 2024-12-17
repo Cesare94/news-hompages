@@ -1,0 +1,503 @@
+* {
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    max-width: 1440px;
+}
+
+
+.container {
+    width: 968px;
+    margin: 2% 10%;
+    display: grid;
+    grid-template-areas: 'nav .'
+                        'main aside'
+                        'footer .';
+}
+
+/* MENU NAVIGATOR */
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 5%;
+    grid-area: nav;
+}
+
+nav img {
+    height: 40px;
+}
+
+nav #iconMenu {
+    display: none;
+}
+
+nav #iconClose {
+    display: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+
+}
+
+nav ul li {
+    padding: 5%;
+    position: relative;
+    left: 35%;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: hsl(233, 8%, 79%);
+}
+
+
+/* PARTE CENTRALE */
+
+main {
+    grid-area: main;
+}
+
+main img {
+    width: 80%;
+}
+
+main .mobile {
+    display: none;
+}
+
+main .text{
+    width: 80%;
+    display: grid;
+    grid-template-areas: 'h1 p'
+                        'h1 button';
+}
+
+.text h1 {
+    grid-area: h1;
+    width: 80%;
+    font-weight: 900;
+    font-size: 42px;
+}
+
+.text p {
+    grid-area: p;
+    font-size: 15px;
+    position: relative;
+    right: 20%;
+    padding-top: 10%;
+    width: 120%;
+}
+
+.text button {
+    grid-area: button;
+    width: 80%;
+    background-color:  hsl(5, 85%, 63%);
+    padding: 2%;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: relative;
+    right: 20%;
+    border: none;
+    font-weight: bold;
+}
+
+/* NEW DIV */
+
+aside {
+    grid-area: aside;
+    border: 1px solid;
+    position: relative;
+    right: 30%;
+    padding: 0 5%;
+    background-color: hsl(240, 100%, 5%);
+    width: 100%;
+    
+}
+
+aside h2 {
+    font-weight: 800;
+    color: hsl(35, 77%, 62%);
+    font-size: 32px;
+    
+}
+
+aside b {
+    color: hsl(36, 100%, 99%);
+}
+
+aside p {
+    color: hsl(233, 8%, 79%);
+    font-size: 15px;
+}
+
+/* NUMBER FOOTER */
+
+footer {
+    grid-area: footer;
+    display: flex;
+    margin-top: 10%;
+    width: 140%;
+    
+    
+}
+
+footer .one {
+    display: grid;
+    grid-template-areas: 'img h3'
+                        'img strong'
+                        'img p';
+                        
+}
+
+footer .one img {
+    grid-area: img;
+    width: 60%;
+    
+}
+
+footer .one h3 {
+    grid-area: h3;
+    font-weight: 500;
+    position: relative;
+    bottom: 30%;
+    font-size: 27px;
+    right: 10%;
+    color: hsl(5, 85%, 63%);
+
+}
+
+footer .one strong {
+    grid-area: strong;
+    position: relative;
+    bottom: 270%;
+    font-size: 14px;
+    right: 10%;
+}
+
+footer .one p{
+    grid-area: p;
+    position: relative;
+    bottom: 90%;
+    font-size: 12px;
+    right: 10%;
+}
+
+
+footer .two {
+    display: grid;
+    grid-template-areas: 'img h3'
+                        'img strong'
+                        'img p';
+}
+
+footer .two img {
+    grid-area: img;
+    width: 70%;
+}
+
+footer .two h3 {
+    grid-area: h3;
+    font-weight: 500;
+    position: relative;
+    bottom: 30%;
+    font-size: 27px;
+    right: 10%;
+    color: hsl(5, 85%, 63%);
+}
+
+footer .two strong {
+    grid-area: strong;
+    position: relative;
+    bottom: 260%;
+    font-size: 14px;
+    right: 10%;
+}
+
+footer .two p{
+    grid-area: p;
+    position: relative;
+    bottom: 90%;
+    font-size: 12px;
+    right: 10%;
+}
+
+
+footer .three{
+    margin-left: 2%;
+    display: grid;
+    grid-template-areas: 'img h3'
+                        'img strong'
+                        'img p';
+
+}
+footer .three img {
+    grid-area: img;
+    width: 75%;
+}
+
+footer .three h3 {
+    grid-area: h3;
+    font-weight: 500;
+    position: relative;
+    bottom: 32%;
+    font-size: 27px;
+    color: hsl(5, 85%, 63%);
+    
+
+}
+
+footer .three strong {
+    grid-area: strong;
+    position: relative;
+    bottom: 270%;
+    font-size: 14px;
+
+}
+
+footer .three p{
+    grid-area: p;
+    position: relative;
+    bottom: 85%;
+    font-size: 12px;
+}
+
+
+
+@media screen and (max-width:768px) {
+
+    body {
+        z-index: 0;       
+        background-color: hsl(233, 8%, 79%);
+    }
+
+    
+    .container {
+        z-index: 0;
+        background-color: hsl(36, 100%, 99%);
+        margin: 0 auto;
+        padding-left: 10%;
+        position: relative;
+        right: 10%;
+        border: 1px solid black;
+        width: 400px;
+        display: grid;
+        grid-template-areas:'nav'
+                            'main' 
+                            'aside'
+                            'footer';
+    }
+    
+    nav {
+        grid-area: nav;
+        display: flex;
+        justify-content: left;
+
+    }
+    
+    nav img {
+        height: 20px;
+    }
+
+    nav #iconMenu {
+        display: inline-block;
+        position: relative;
+        left: 60%;
+        width: 10%;
+        cursor: pointer;
+    }
+
+    nav #iconClose {
+        display: inline-block;
+        width: 10%;
+        position: relative;
+        left: 80%;
+        top: 2%;
+        cursor: pointer;
+        
+        
+    }
+
+    nav .list ul {
+        list-style: none;
+        display: none;
+        flex-direction: column;
+        position: relative;
+        left: 10%;
+        bottom: 12%;
+        z-index: 1;
+        background-color: hsl(36, 100%, 99%);
+        width: 250%;
+        height: 300%;
+        border: 1px solid;
+        
+       
+    
+    }
+    
+    nav ul li {
+        padding: 5%;
+        position: relative;
+        left: 0%;
+        top: 10%;
+        z-index: 1;
+           
+        
+    }
+    
+    nav ul li a {
+        text-decoration: none;
+        color: hsl(240, 100%, 5%);
+        z-index: 1;
+        position: relative;
+        right: 15%;
+    }
+
+    
+    main {
+        grid-area: main;
+    }
+    
+    main img {
+        display: none;
+    }
+
+    main .mobile {
+        display: inline-block;
+        margin-top: 5%;
+    }
+
+
+    
+    main .text{
+        width: 80%;
+        display: grid;
+        grid-template-areas: 'h1'
+                              'p'
+                            'button';
+    }
+    
+    .text h1 {
+        grid-area: h1;
+        width: 80%;
+        font-weight: 900;
+        font-size: 32px;
+        text-align: left;
+        position: relative;
+        left: 0%;
+    }
+    
+    .text p {
+        grid-area: p;
+        font-size: 15px;
+        right: 0%;
+        left: 0%;
+        bottom: 30%;
+        width: 100%;
+    }
+    
+    .text button {
+        grid-area: button;
+        width: 60%;
+        padding: 5%;
+        right: 0%;
+        left: 0%;
+        bottom: 70%;
+    }
+    
+    aside {
+        grid-area: aside;
+        right: 0%;
+        left: 0%;
+        width: 80%;
+        
+    }
+    
+    aside h2 {
+        text-align: center;
+        
+    }
+    
+    
+    footer {
+        grid-area: footer;
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        
+        
+    }
+    
+    footer .one {
+        display: grid;
+        grid-template-areas: 'img h3'
+                            'img strong'
+                            'img p';
+                            
+    }
+    
+    footer .one img {
+        grid-area: img;
+        width: 70%;
+        position: relative;
+        left: 0%;
+        top: 5%;
+        
+    }
+    
+    
+    
+    footer .two {
+        display: grid;
+        grid-template-areas: 'img h3'
+                            'img strong'
+                            'img p';
+    }
+    
+    footer .two img {
+        grid-area: img;
+        width: 70%;
+        position: relative;
+        left: 0%;
+        top: 5%;
+    }
+    
+    
+    
+    footer .three{
+        display: grid;
+        grid-template-areas: 'img h3'
+                            'img strong'
+                            'img p';
+    
+    }
+    footer .three img {
+        grid-area: img;
+        width: 80%;
+        position: relative;
+        left: 0%;
+        top: 5%;
+    }
+    
+    footer .three h3 {
+        right: 5%;
+        
+    
+    }
+    
+    footer .three strong {
+        right: 5%;
+    
+    }
+    
+    footer .three p{
+        right: 5%;
+    }
+    
+    
+}
